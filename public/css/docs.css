@@ -68,12 +68,12 @@ body::before {
 .sample-docs {
   margin-top: 20px;
   width: 942px;
-  height: 500px;
+  height: 700px;
 }
 
 .sample-docs .page {
   width: 471px;
-  height: 500px;
+  height: 700px;
   background: white;
 
   -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
