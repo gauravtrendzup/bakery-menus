@@ -1,170 +1,450 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Oven Tales Bakery Menu</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600&family=Parisienne&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
+    <script
+      type="text/javascript"
+      src="public/extras/jquery.min.1.7.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="public/extras/jquery-ui-1.8.20.custom.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="public/extras/jquery.mousewheel.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="public/extras/modernizr.2.5.3.min.js"
+    ></script>
+    <script type="text/javascript" src="public/lib/hash.js"></script>
   </head>
   <body>
-    <main class="container">
+    <div id="canvas">
       <div class="menu-header" aria-label="Oven Tales menu">
-        <button class="nav-button" id="prev-page" type="button" aria-label="Previous page">&larr;</button>
         <div class="brand-mark">
           <span class="brand-kicker">THE</span>
           <span class="brand-name">Oven Tales</span>
           <span class="brand-subtitle">BAKERY &amp; PATISSERIE</span>
         </div>
-        <button class="nav-button" id="next-page" type="button" aria-label="Next page">&rarr;</button>
       </div>
 
-      <div class="book-wrapper">
-        <div class="pages" id="menu-book">
-          <article class="page page-num-1 cover-page">
-            <div class="cover-border">
-              <div class="wheat-mark" aria-hidden="true">
-                <span>✦</span>
+      <div id="book-zoom">
+        <div class="sample-docs">
+          <div class="hard cover-page">
+            <article class="page page-num-1 cover-page">
+              <div class="cover-border">
+                <div class="wheat-mark" aria-hidden="true">
+                  <span><img src="./public/pics/backery_logo.png" alt="backery_logo"></span>
+                </div>
+                <p class="cover-kicker">FRESHLY BAKED EVERY DAY</p>
+                <h1>Oven<br />Tales</h1>
+                <p class="cover-script">A little joy in every bite</p>
+                <div class="cover-divider"></div>
+                <p class="cover-menu">B A K E R Y &nbsp; M E N U</p>
               </div>
-              <p class="cover-kicker">FRESHLY BAKED EVERY DAY</p>
-              <h1>Oven<br />Tales</h1>
-              <p class="cover-script">A little joy in every bite</p>
-              <div class="cover-divider"></div>
-              <p class="cover-menu">B A K E R Y &nbsp; M E N U</p>
-            </div>
-          </article>
-
-          <article class="page page-num-2 menu-page">
-            <div class="menu-heading">
-              <p class="section-number">01</p>
-              <h2>Morning<br />Bakes</h2>
-              <p class="section-note">Golden from the oven</p>
-            </div>
-            <div class="menu-list">
-              <div class="menu-item">
-                <div><h3>Butter Croissant</h3><p>Flaky, honey-glazed layers</p></div>
-                <strong>₹145</strong>
+            </article>
+          </div>
+          <div class="hard">
+            <article class="page page-num-2 menu-page">
+              <div class="menu-heading">
+                <p class="section-number">01</p>
+                <h2>Morning<br />Bakes</h2>
+                <p class="section-note">Golden from the oven</p>
               </div>
-              <div class="menu-item">
-                <div><h3>Almond Pain Au Chocolat</h3><p>Dark chocolate, toasted almonds</p></div>
-                <strong>₹195</strong>
+              <div class="menu-list">
+                <div class="menu-item">
+                  <div>
+                    <h3>Butter Croissant</h3>
+                    <p>Flaky, honey-glazed layers</p>
+                  </div>
+                  <strong>₹145</strong>
+                </div>
+                <div class="menu-item">
+                  <div>
+                    <h3>Almond Pain Au Chocolat</h3>
+                    <p>Dark chocolate, toasted almonds</p>
+                  </div>
+                  <strong>₹195</strong>
+                </div>
+                <div class="menu-item">
+                  <div>
+                    <h3>Cinnamon Roll</h3>
+                    <p>Brown sugar, cream cheese glaze</p>
+                  </div>
+                  <strong>₹165</strong>
+                </div>
+                <div class="menu-item">
+                  <div>
+                    <h3>Blueberry Danish</h3>
+                    <p>Vanilla cream, fresh berries</p>
+                  </div>
+                  <strong>₹185</strong>
+                </div>
               </div>
-              <div class="menu-item">
-                <div><h3>Cinnamon Roll</h3><p>Brown sugar, cream cheese glaze</p></div>
-                <strong>₹165</strong>
+            </article>
+          </div>
+          
+          <div class="page">
+            <article class="page page-num-3 menu-page warm-page">
+              <div class="menu-heading">
+                <p class="section-number">02</p>
+                <h2>Fresh<br />Breads</h2>
+                <p class="section-note">Slow fermented &amp; crusty</p>
               </div>
-              <div class="menu-item">
-                <div><h3>Blueberry Danish</h3><p>Vanilla cream, fresh berries</p></div>
-                <strong>₹185</strong>
+              <div class="menu-list">
+                <div class="menu-item">
+                  <div>
+                    <h3>Rustic Sourdough</h3>
+                    <p>48-hour fermented loaf</p>
+                  </div>
+                  <strong>₹240</strong>
+                </div>
+                <div class="menu-item">
+                  <div>
+                    <h3>Rosemary Focaccia</h3>
+                    <p>Olive oil, sea salt, herbs</p>
+                  </div>
+                  <strong>₹220</strong>
+                </div>
+                <div class="menu-item">
+                  <div>
+                    <h3>Country Baguette</h3>
+                    <p>Crisp crust, soft centre</p>
+                  </div>
+                  <strong>₹180</strong>
+                </div>
+                <div class="menu-item">
+                  <div>
+                    <h3>Multigrain Loaf</h3>
+                    <p>Seeds, oats, honey</p>
+                  </div>
+                  <strong>₹260</strong>
+                </div>
               </div>
-            </div>
-          </article>
-
-          <article class="page page-num-3 menu-page warm-page">
-            <div class="menu-heading">
-              <p class="section-number">02</p>
-              <h2>Fresh<br />Breads</h2>
-              <p class="section-note">Slow fermented &amp; crusty</p>
-            </div>
-            <div class="menu-list">
-              <div class="menu-item">
-                <div><h3>Rustic Sourdough</h3><p>48-hour fermented loaf</p></div>
-                <strong>₹240</strong>
+            </article>
+          </div>
+          <div class="page">
+            <article class="page page-num-4 menu-page">
+              <div class="menu-heading">
+                <p class="section-number">03</p>
+                <h2>Cakes &amp;<br />Patisserie</h2>
+                <p class="section-note">Made for sweet moments</p>
               </div>
-              <div class="menu-item">
-                <div><h3>Rosemary Focaccia</h3><p>Olive oil, sea salt, herbs</p></div>
-                <strong>₹220</strong>
+              <div class="menu-list">
+                <div class="menu-item">
+                  <div>
+                    <h3>Tiramisu</h3>
+                    <p>Espresso, mascarpone, cocoa</p>
+                  </div>
+                  <strong>₹280</strong>
+                </div>
+                <div class="menu-item">
+                  <div>
+                    <h3>Chocolate Mousse</h3>
+                    <p>70% dark chocolate, cream</p>
+                  </div>
+                  <strong>₹260</strong>
+                </div>
+                <div class="menu-item">
+                  <div>
+                    <h3>Berry Chantilly</h3>
+                    <p>Sponge, berries, vanilla cream</p>
+                  </div>
+                  <strong>₹295</strong>
+                </div>
+                <div class="menu-item">
+                  <div>
+                    <h3>Caramel Eclair</h3>
+                    <p>Choux, salted caramel custard</p>
+                  </div>
+                  <strong>₹210</strong>
+                </div>
               </div>
-              <div class="menu-item">
-                <div><h3>Country Baguette</h3><p>Crisp crust, soft centre</p></div>
-                <strong>₹180</strong>
+            </article>
+          </div>
+          <div class="hard">
+            <article class="page page-num-5 menu-page warm-page">
+              <div class="menu-heading">
+                <p class="section-number">04</p>
+                <h2>Coffee &amp;<br />Drinks</h2>
+                <p class="section-note">The perfect pairing</p>
               </div>
-              <div class="menu-item">
-                <div><h3>Multigrain Loaf</h3><p>Seeds, oats, honey</p></div>
-                <strong>₹260</strong>
+              <div class="menu-list">
+                <div class="menu-item">
+                  <div>
+                    <h3>Café Latte</h3>
+                    <p>Espresso, steamed milk</p>
+                  </div>
+                  <strong>₹180</strong>
+                </div>
+                <div class="menu-item">
+                  <div>
+                    <h3>Vienna Mocha</h3>
+                    <p>Cocoa, espresso, whipped cream</p>
+                  </div>
+                  <strong>₹210</strong>
+                </div>
+                <div class="menu-item">
+                  <div>
+                    <h3>Belgian Hot Chocolate</h3>
+                    <p>Rich chocolate, vanilla</p>
+                  </div>
+                  <strong>₹225</strong>
+                </div>
+                <div class="menu-item">
+                  <div>
+                    <h3>Berry Iced Tea</h3>
+                    <p>Black tea, berries, citrus</p>
+                  </div>
+                  <strong>₹195</strong>
+                </div>
               </div>
-            </div>
-          </article>
-
-          <article class="page page-num-4 menu-page">
-            <div class="menu-heading">
-              <p class="section-number">03</p>
-              <h2>Cakes &amp;<br />Patisserie</h2>
-              <p class="section-note">Made for sweet moments</p>
-            </div>
-            <div class="menu-list">
-              <div class="menu-item">
-                <div><h3>Tiramisu</h3><p>Espresso, mascarpone, cocoa</p></div>
-                <strong>₹280</strong>
+            </article>
+          </div>
+          <div class="hard">
+            <article class="page page-num-6 end-page">
+              <div class="cover-border">
+                <p class="end-kicker">VISIT US</p>
+                <h2>Made with love,<br />served with a smile.</h2>
+                <div class="end-details">
+                  <p>12 Willow Lane, Bengaluru</p>
+                  <p>Mon–Sun · 8:00 AM–9:00 PM</p>
+                  <p class="phone">+91 98765 43210</p>
+                </div>
+                <p class="cover-script">Stay for a while</p>
               </div>
-              <div class="menu-item">
-                <div><h3>Chocolate Mousse</h3><p>70% dark chocolate, cream</p></div>
-                <strong>₹260</strong>
-              </div>
-              <div class="menu-item">
-                <div><h3>Berry Chantilly</h3><p>Sponge, berries, vanilla cream</p></div>
-                <strong>₹295</strong>
-              </div>
-              <div class="menu-item">
-                <div><h3>Caramel Eclair</h3><p>Choux, salted caramel custard</p></div>
-                <strong>₹210</strong>
-              </div>
-            </div>
-          </article>
-
-          <article class="page page-num-5 menu-page warm-page">
-            <div class="menu-heading">
-              <p class="section-number">04</p>
-              <h2>Coffee &amp;<br />Drinks</h2>
-              <p class="section-note">The perfect pairing</p>
-            </div>
-            <div class="menu-list">
-              <div class="menu-item">
-                <div><h3>Café Latte</h3><p>Espresso, steamed milk</p></div>
-                <strong>₹180</strong>
-              </div>
-              <div class="menu-item">
-                <div><h3>Vienna Mocha</h3><p>Cocoa, espresso, whipped cream</p></div>
-                <strong>₹210</strong>
-              </div>
-              <div class="menu-item">
-                <div><h3>Belgian Hot Chocolate</h3><p>Rich chocolate, vanilla</p></div>
-                <strong>₹225</strong>
-              </div>
-              <div class="menu-item">
-                <div><h3>Berry Iced Tea</h3><p>Black tea, berries, citrus</p></div>
-                <strong>₹195</strong>
-              </div>
-            </div>
-          </article>
-
-          <article class="page page-num-6 end-page">
-            <div class="cover-border">
-              <p class="end-kicker">VISIT US</p>
-              <h2>Made with love,<br />served with a smile.</h2>
-              <div class="end-details">
-                <p>12 Willow Lane, Bengaluru</p>
-                <p>Mon–Sun · 8:00 AM–9:00 PM</p>
-                <p class="phone">+91 98765 43210</p>
-              </div>
-              <p class="cover-script">Stay for a while</p>
-            </div>
-          </article>
+            </article>
+          </div>
         </div>
       </div>
-      <p class="page-indicator"><span id="current-page">1</span> / 6</p>
-    </main>
 
-    <script
-      src="https://code.jquery.com/jquery-3.7.1.min.js"
-      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-      crossorigin="anonymous"
-    ></script>
-    <script src="app.js"></script>
+      <div id="slider-bar" class="turnjs-slider">
+        <div id="slider"></div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      function loadApp() {
+        var flipbook = $(".sample-docs");
+
+        // Check if the CSS was already loaded
+
+        if (flipbook.width() == 0 || flipbook.height() == 0) {
+          setTimeout(loadApp, 10);
+          return;
+        }
+
+        // Mousewheel
+
+        $("#book-zoom").mousewheel(function (event, delta, deltaX, deltaY) {
+          var data = $(this).data(),
+            step = 6,
+            flipbook = $(".sample-docs"),
+            actualPos = $("#slider").slider("value") * step;
+
+          if (typeof data.scrollX === "undefined") {
+            data.scrollX = actualPos;
+            data.scrollPage = flipbook.turn("page");
+          }
+
+          data.scrollX = Math.min(
+            $("#slider").slider("option", "max") * step,
+            Math.max(0, data.scrollX + deltaX),
+          );
+
+          var actualView = Math.round(data.scrollX / step),
+            page = Math.min(
+              flipbook.turn("pages"),
+              Math.max(1, actualView * 2 - 2),
+            );
+
+          if ($.inArray(data.scrollPage, flipbook.turn("view", page)) == -1) {
+            data.scrollPage = page;
+            flipbook.turn("page", page);
+          }
+
+          if (data.scrollTimer) clearInterval(data.scrollTimer);
+
+          data.scrollTimer = setTimeout(function () {
+            data.scrollX = undefined;
+            data.scrollPage = undefined;
+            data.scrollTimer = undefined;
+          }, 1000);
+        });
+
+        // Slider
+
+        $("#slider").slider({
+          min: 1,
+          max: 100,
+
+          start: function (event, ui) {
+            if (!window._thumbPreview) {
+              _thumbPreview = $("<div />", { class: "thumbnail" }).html(
+                "<div></div>",
+              );
+              setPreview(ui.value);
+              _thumbPreview.appendTo($(ui.handle));
+            } else setPreview(ui.value);
+
+            moveBar(false);
+          },
+
+          slide: function (event, ui) {
+            setPreview(ui.value);
+          },
+
+          stop: function () {
+            if (window._thumbPreview) _thumbPreview.removeClass("show");
+
+            $(".sample-docs").turn(
+              "page",
+              Math.max(1, $(this).slider("value") * 2 - 2),
+            );
+          },
+        });
+
+        // URIs
+
+        Hash.on("^page\/([0-9]*)$", {
+          yep: function (path, parts) {
+            var page = parts[1];
+
+            if (page !== undefined) {
+              if ($(".sample-docs").turn("is"))
+                $(".sample-docs").turn("page", page);
+            }
+          },
+          nop: function (path) {
+            if ($(".sample-docs").turn("is")) $(".sample-docs").turn("page", 1);
+          },
+        });
+
+        // Arrows
+
+        $(document).keydown(function (e) {
+          var previous = 37,
+            next = 39;
+
+          switch (e.keyCode) {
+            case previous:
+              $(".sample-docs").turn("previous");
+
+              break;
+            case next:
+              $(".sample-docs").turn("next");
+
+              break;
+          }
+        });
+
+        // Create the flipbook
+
+        flipbook
+          .turn({
+            elevation: 50,
+            acceleration: false,
+            gradients: true,
+            autoCenter: true,
+            duration: 1000,
+            pages: 6,
+            when: {
+              turning: function (e, page, view) {
+                var book = $(this),
+                  currentPage = book.turn("page"),
+                  pages = book.turn("pages");
+
+                if (currentPage > 3 && currentPage < pages - 3) {
+                  if (page == 1) {
+                    book.turn("page", 2).turn("stop").turn("page", page);
+                    e.preventDefault();
+                    return;
+                  } else if (page == pages) {
+                    book
+                      .turn("page", pages - 1)
+                      .turn("stop")
+                      .turn("page", page);
+                    e.preventDefault();
+                    return;
+                  }
+                } else if (page > 3 && page < pages - 3) {
+                  if (currentPage == 1) {
+                    book.turn("page", 2).turn("stop").turn("page", page);
+                    e.preventDefault();
+                    return;
+                  } else if (currentPage == pages) {
+                    book
+                      .turn("page", pages - 1)
+                      .turn("stop")
+                      .turn("page", page);
+                    e.preventDefault();
+                    return;
+                  }
+                }
+
+                Hash.go("page/" + page).update();
+
+                if (page == 1 || page == pages) $(".sample-docs .tabs").hide();
+              },
+
+              turned: function (e, page, view) {
+                var book = $(this);
+
+                $("#slider").slider("value", getViewNumber(book, page));
+
+                if (page != 1 && page != book.turn("pages"))
+                  $(".sample-docs .tabs").fadeIn(500);
+                else $(".sample-docs .tabs").hide();
+
+                book.turn("center");
+              },
+
+              start: function (e, pageObj) {
+                moveBar(true);
+              },
+
+              end: function (e, pageObj) {
+                var book = $(this);
+
+                setTimeout(function () {
+                  $("#slider").slider("value", getViewNumber(book));
+                }, 1);
+
+                moveBar(false);
+              },
+
+              //   missing: function (e, pages) {
+              //     for (var i = 0; i < pages.length; i++)
+              //       addPage(pages[i], $(this));
+              //   },
+            },
+          })
+          .turn("page", 1);
+
+        $("#slider").slider("option", "max", numberOfViews(flipbook));
+
+        flipbook.addClass("animated");
+
+        // Show canvas
+
+        $("#canvas").css({ visibility: "visible" });
+      }
+
+      // Hide canvas
+
+      $("#canvas").css({ visibility: "hidden" });
+
+      yepnope({
+        test: Modernizr.csstransforms,
+        yep: ["public/lib/turn.min.js", "public/css/jquery.ui.css"],
+        nope: [
+          "public/lib/turn.html4.min.js",
+          "public/css/jquery.ui.html4.css",
+        ],
+        both: ["public/css/docs.css", "public/js/docs.js", "./index.css"],
+        complete: loadApp,
+      });
+    </script>
   </body>
 </html>
