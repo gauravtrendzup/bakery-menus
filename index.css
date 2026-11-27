@@ -145,7 +145,7 @@ body::before {
 .wheat-mark {
   width: 95px;
   height: 95px;
-  border: 1px solid var(--gold);
+  /* border: 1px solid var(--gold); */
   border-radius: 50%;
   display: grid;
   place-items: center;
@@ -155,8 +155,9 @@ body::before {
 }
 
 .wheat-mark span img {
-  width: 84px;
-  height: 84px;
+  width: 95px;
+  height: 95px;
+  scale: 1.5;
 }
 
 .cover-kicker,
