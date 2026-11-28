@@ -7,13 +7,47 @@
 }
 
 :root {
+  /* Brand colors */
+  --cream: #fff8ed;
+  --paper: #fffaf0;
+  --pink: #ffe8ee;
+  --blush: #ffcfdb;
+  --rose: #e9a6ba;
+  --red: #eb0417;
+  --deep-red: #a91627;
+  --gold: #b69536;
+  --dark-brown: #343126;
+  /* shadcn/ui theme */
+  --background: #fffaf0;
+  --foreground: #343126;
+  --card: #ffffff;
+  --card-foreground: #343126;
+  --popover: #ffffff;
+  --popover-foreground: #343126;
+  --primary: #eb0417;
+  --primary-foreground: #ffffff;
+  --secondary: #ffe8ee;
+  --secondary-foreground: #853448;
+  --muted: #fff1f3;
+  --muted-foreground: #817477;
+  --accent: #ffcfdb;
+  --accent-foreground: #792c40;
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+  --border: #ebd5d9;
+  --input: #ebd5d9;
+  --ring: #eb0417;
+  --radius: 0.75rem;
+}
+
+/* :root {
   --cream: #f5ead7;
   --paper: #fffaf0;
   --ink: #343126;
   --green: #495846;
   --gold: #b6955d;
   --rust: #9d5d3d;
-}
+} */
 
 body {
   margin: 0;
@@ -104,7 +138,7 @@ body::before {
       rgba(255, 255, 255, 0.12),
       transparent 16rem
     ),
-    var(--green) !important;
+    var(--green);
   color: #fffaf0;
   text-align: center;
 }
@@ -143,9 +177,9 @@ body::before {
 }
 
 .wheat-mark {
-  width: 95px;
-  height: 95px;
-  /* border: 1px solid var(--gold); */
+  width: 105px;
+  height: 105px;
+  border: 1px solid var(--gold);
   border-radius: 50%;
   display: grid;
   place-items: center;
@@ -155,9 +189,47 @@ body::before {
 }
 
 .wheat-mark span img {
-  width: 95px;
-  height: 95px;
-  scale: 1.5;
+  width: 100px;
+  height: 100px;
+  /* scale: 1.5; */
+}
+
+.sample-docs .hard.cover-page {
+  background-image: url(public/pics/Elegant\ Pink\ Bakery\ Menu\ Cover.webp);
+  background-position: center;
+  background-size: cover;
+}
+
+.sample-docs .hard.end-page {
+  background-image: url(public/pics/Oven\ Tales\ Celebration\ Cake\ Poster\ end\ cover.webp);
+  background-position: center;
+  background-size: cover;
+}
+
+.sample-docs .hard.page-2 {
+  background-image: url(public/pics/1.webp);
+  background-position: center;
+  background-size: cover;
+}
+.sample-docs .page.page-3 {
+  background-image: url(public/pics/2.webp);
+  background-position: center;
+  background-size: cover;
+}
+.sample-docs .page.page-4 {
+  background-image: url(public/pics/3.webp);
+  background-position: center;
+  background-size: cover;
+}
+.sample-docs .page.page-5 {
+  background-image: url(public/pics/4.webp);
+  background-position: center;
+  background-size: cover;
+}
+.sample-docs .page.page-6 {
+  background-image: url(public/pics/5.webp);
+  background-position: center;
+  background-size: cover;
 }
 
 .cover-kicker,

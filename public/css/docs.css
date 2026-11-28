@@ -41,7 +41,7 @@ body::before {
 }
 
 #canvas {
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -55,6 +55,7 @@ body::before {
   -ms-transition: -ms-transform 1s;
   -o-transition: -o-transform 1s;
   transition: transform 1s;
+  height: 90vh;
 }
 
 .animated {
@@ -66,14 +67,14 @@ body::before {
 }
 
 .sample-docs {
-  margin-top: 20px;
-  width: 942px;
-  height: 700px;
+  /* margin-top: 20px; */
+  width: 842px;
+  height: 550px;
 }
 
 .sample-docs .page {
-  width: 471px;
-  height: 700px;
+   width: 842px;
+  height: 550px;
   background: white;
 
   -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
